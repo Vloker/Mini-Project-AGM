@@ -5,38 +5,38 @@ import DefaultSpinner from "../Atom/Spinner";
 
 const FormOpenAI = () => {
   const openai = new OpenAI({
-    apiKey: "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",
+    apiKey: "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",
     dangerouslyAllowBrowser: true,
   });
 
   const [prompt, setPrompt] = useState("");
-  const [response, setResponse] = useState("");
+  const [apiResponse, setAPIResponse] = useState("");
   const [loading, setLoading] = useState(false);
 
   const AICLick = async () => {
     setLoading(true);
 
     // Menambahkan prompt yang spesifik seputar badminton
-    const promptWithBadminton = `Bulutangkis adalah olahraga yang populer. Jawablah pertanyaan berikut tentang bulutangkis:\n\n${prompt}`;
+    const promptWithBadminton = `Jawablah pertanyaan hanya tentang bulutangkis dan tidak menjawab pertanyaan selain bulutangkis:\n${prompt}`;
 
     // Menentukan kata kunci yang mengindikasikan pertanyaan tidak berhubungan dengan badminton
-    const unrelatedKeywords = ["football", "soccer", "baseball", "tennis", "pencipta", "penyanyi", "pelukis"]; // Kata kunci yang tidak berhubungan
+    const unrelatedKeywords = ["football", "soccer", "baseball", "tennis", "pencipta", "penyanyi", "pelukis","kartun","animasi"]; // Kata kunci yang tidak berhubungan
 
     // Memeriksa apakah pertanyaan mengandung kata kunci yang tidak berhubungan
     const isUnrelated = unrelatedKeywords.some(keyword => prompt.toLowerCase().includes(keyword.toLowerCase()));
 
-
     if (isUnrelated){
-        setResponse("Maaf, kami kurang paham");
-    }else{
+        setAPIResponse("Maaf, kami kurang paham");
+    } else {
         try {
             const response = await openai.completions.create({
               model: "gpt-3.5-turbo-instruct",
               prompt: promptWithBadminton,
-              max_tokens: 3000
+              max_tokens: 3000,
+              temperature: 1,
             });
     
-            setResponse(response.choices[0].text);
+            setAPIResponse(response.choices[0].text);
           } catch (error) {
             console.log(error);
           }
@@ -49,7 +49,6 @@ const FormOpenAI = () => {
       <div className="w-full flex items-center relative rounded-lg border border-gray-200 p-2">
         <textarea
           className="border-none w-full resize-none outline-none p-2 pr-10 pl-2"
-          id=""
           rows="1"
           placeholder="Ask a Badminton Question"
           name="text_ai"
@@ -64,7 +63,7 @@ const FormOpenAI = () => {
             <p className="flex items-center">{loading ? <DefaultSpinner /> : ""}</p>
         </div>
       <div className="w-full flex justify-center relative rounded-lg border border-gray-200 py-5 px-5">
-        <p>{response}</p>
+        <p>{apiResponse}</p>
       </div>
     </>
   );

@@ -1,14 +1,16 @@
 'use client';
 
 import { Table } from 'flowbite-react';
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getUsers, deleteUser, userSelector } from '../../redux/feature/Users';
 import ModalList from "../Molekul/ModalTambahUser"
 import { useNavigate } from 'react-router-dom';
+import { BiSearch } from "react-icons/bi";
 
 export default function TableAdmin() {
 
+  const [searchTerm, setSearchTerm] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const users = useSelector(userSelector.selectAll);
@@ -27,10 +29,35 @@ export default function TableAdmin() {
       alert('Dibatalkan');
     }
   }
-  
+
+  // Mencari Data
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  }
+
+  // Menyaring data sesuai dengan kata kunci pencarian
+  const filteredUsers = users.filter((user) =>
+    user.username.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
 
   return (
     <>
+    <div className="relative mt-5 ">
+        <div className="absolute inset-y-0 left-0 flex items-center px-3 ">
+            <button>
+              <BiSearch className="w-5 h-5" />
+            </button> 
+        </div>
+            <input 
+              type="text" 
+              placeholder="Search"
+              value={searchTerm}
+              onChange={handleSearch} 
+              className="py-3 pl-10 w-2/4 rounded-xl"/>
+    </div>
+
+    <div className="mt-5 mb-10 pe-5 gap-5 flex flex-col">
     <div>
       <ModalList />
     </div>
@@ -65,7 +92,7 @@ export default function TableAdmin() {
         </Table.HeadCell>
       </Table.Head>
       <Table.Body className="divide-y">
-        {users.map((user) => (
+        {filteredUsers.map((user) => (
           <Table.Row 
           className="bg-white dark:border-gray-700 dark:bg-gray-800"
           key={user.id}
@@ -109,6 +136,7 @@ export default function TableAdmin() {
         ))}
       </Table.Body>
     </Table>
+    </div>
         </>
   )
 }

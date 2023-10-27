@@ -2,11 +2,11 @@
 
 import { Card } from 'flowbite-react';
 
-const CardLP = ({title,title2}) => {
+const CardLP = ({title,title2,src}) => {
     
     return (
       <Card
-        imgSrc="src/assets/Badminton Doubles Strategy - From Basic Rules to Winning the Match.jpeg"
+        imgSrc={src}
         className='w-64 h-full '
         >
         <p className="text-lg font-bold font-montserrat text-green">

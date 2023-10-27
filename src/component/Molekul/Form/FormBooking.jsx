@@ -2,76 +2,79 @@ import SelectionWithValues from "../../Atom/OptionsLapangan"
 import DatepickerComponent from "../../Atom/Tanggal"
 import OptionsWaktu from "../../Atom/OptionsWaktu";
 import { Label, TextInput} from 'flowbite-react';
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { update, add } from "../../../redux/feature/ListBooking";
+import { useDispatch } from 'react-redux'
+import { addBooking } from "../../../redux/feature/Listbooking";
+import { useState } from 'react';
 
 const FormBooking = () => {
 
-    const dispatch = useDispatch();
+    const dispatch = useDispatch()
     const [jam, setJam] = useState('')
     const [waktu, setWaktu] = useState('')
     const [tanggal, setTanggal] = useState('')
     const [lapangan, setLapangan] = useState('')
 
-    const UpdateValues = (e) => {
+    const handleAdd = async (e) => {
         e.preventDefault()
-        dispatch(update({
-            jam, waktu, tanggal, lapangan
-        }))
-        dispatch(add({
-            jam, waktu, tanggal, lapangan
+        await dispatch(addBooking({
+            jam,
+            waktu,
+            tanggal,
+            lapangan
         }))
     }
 
     return (
         <>
-        <form onSubmit={UpdateValues}>
-            <div className="flex space-y-3 ">
+        <form className="flex flex-col gap-4" onSubmit={handleAdd}>
                 <div className="flex flex-col gap-2">
                     <Label 
                         htmlFor="jam" 
-                        value="Jam Mulai" />
+                        value="Jam Mulai" 
+                        />
                     <TextInput 
-                        id="Hourstart" 
-                        type="text" 
-                        placeholder="12:00"
+                        name="jam"
                         value={jam}
                         onChange={(e) => setJam(e.target.value)}
+                        type="text" 
+                        placeholder="12:00"
                         required={true} />
                 </div>
-            </div>
 
-            <div className="mt-5 flex flex-col gap-2">
+            <div className="flex flex-col gap-2">
                 <Label 
                     htmlFor="waktu" 
-                    value="Waktu Bermain" />
+                    value="Waktu Bermain" 
+                    />
                 <OptionsWaktu 
                     onChange={(e) => setWaktu(e.target.value)}
-                    value={waktu} />
+                    value={waktu}
+                    />
             </div>
 
-            <div className="mt-5 flex flex-col gap-2">
+            <div className="flex flex-col gap-2">
                 <Label 
                     htmlFor="Date" 
-                    value="Tanggal" />
+                    value="Tanggal" 
+                    />
                 <DatepickerComponent 
-                    onChange={(e) => setTanggal(e.target.value)} 
-                    value={tanggal}/>
+                    onChange={(e) => setTanggal(e.target.value)}
+                    value={tanggal}
+                    />
             </div>
 
-            <div className="mt-5 flex flex-col gap-2">
+            <div className="flex flex-col gap-2">
                 <Label 
                     htmlFor="Court" 
-                    value="Lapangan" />
+                    value="Lapangan" 
+                    />
                 <SelectionWithValues 
                     onChange={(e) => setLapangan(e.target.value)}
-                    value={lapangan}/>
+                    value={lapangan}
+                    />
             </div>
 
-            <div className="mt-5 relative ">
-                <button className="absolute right-0 bg-green text-white font-bold hover:bg-griy hover:text-green py-2 px-4 rounded" type="submit">Tambahkan</button>
-            </div>
+                <button className="bg-green text-white font-bold hover:bg-griy hover:text-green py-2 px-4 rounded" type="submit">Tambahkan</button>
         </form>
         </>
     )

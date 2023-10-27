@@ -1,19 +1,15 @@
 'use client';
 
 import { Table } from 'flowbite-react';
+import React from 'react'
+
+
+
 const TabelTransaksi = () => {
 
-    const data = [
-        {
-          jam: '12:00',
-          waktu: '1 jam',
-          tanggal: '12/12/2023',
-          lapangan: 'Court 1',
-          total: 'Rp. 40.000'
-        }
-    ]
 
     return (
+      <>
       <Table hoverable >
         <Table.Head>
           <Table.HeadCell>
@@ -47,6 +43,10 @@ const TabelTransaksi = () => {
         ))}
       </Table.Body>
       </Table>
+      <div>
+        <Button className="bg-green text-white font-montserrat rounded-lg">Transaksi Lapangan</Button>
+      </div>
+      </>
     )
 }
 export default TabelTransaksi

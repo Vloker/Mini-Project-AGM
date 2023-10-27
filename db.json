@@ -1,8 +1,11 @@
 {
-    "User": [
-        {"id":1, "username": "admin", "password": "admin123456", "email": "a@a.com", "phone": "1234567890", "address": "surabaya", "gender": "male", "city": "surabaya", "country": "indonesia"},
-        {"id":2, "username": "admin1", "password": "admin123456", "email": "a@a.com", "phone": "1234567890", "address": "surabaya", "gender": "male", "city": "surabaya", "country": "indonesia"},
-        {"id":3, "username": "admin2", "password": "admin123456", "email": "a@a.com", "phone": "1234567890", "address": "surabaya", "gender": "male", "city": "surabaya", "country": "indonesia"},
-        {"id":4, "username": "admin3", "password": "admin123456", "email": "a@a.com", "phone": "1234567890", "address": "surabaya", "gender": "male", "city": "surabaya", "country": "indonesia"}
-    ]
+  "booking": [
+    {
+      "id": 1,
+      "jam": "12:00",
+      "waktu": "1 Jam",
+      "tanggal": "12-12-2022",
+      "lapangan": "Rekreasi & Keluarga"
+    }
+  ]
 }

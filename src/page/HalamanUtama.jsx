@@ -52,13 +52,25 @@ const HalamanUtama = () => {
                           </div>
                           <div className="flex gap-20 justify-center">
                             <div>
-                                <CardLP title="Rekreasi & Keluarga" title2="Lapangan bulutangkis rekreasi keluarga adalah lapangan yang dirancang untuk bermain bulutangkis dan bersenang-senang bersama dalam lingkungan yang santai." />
+                                <CardLP 
+                                    title="Rekreasi & Keluarga" 
+                                    title2="Lapangan bulutangkis rekreasi keluarga adalah lapangan yang dirancang untuk bermain bulutangkis dan bersenang-senang bersama dalam lingkungan yang santai."
+                                    src="src/assets/Badminton Doubles Strategy - From Basic Rules to Winning the Match.jpeg"
+                                    />
                             </div>
                             <div>
-                                <CardLP title="Bulutangkis Berkualitas" title2="Lapangan bulutangkis berkualitas adalah lapangan olahraga yang memenuhi standar tinggi untuk permainan bulutangkis" />
+                                <CardLP 
+                                    title="Bulutangkis Berkualitas" 
+                                    title2="Lapangan bulutangkis berkualitas adalah lapangan olahraga yang memenuhi standar tinggi untuk permainan bulutangkis" 
+                                    src="src/assets/Let Us Help You Create the Perfect Court for Your Needs.jpeg"
+                                    />
                             </div>
                             <div>
-                                <CardLP title="Kompetitif & Turnamen" title2="Lapangan bulutangkis kompetitif dan turnamen dirancang khusus untuk pertandingan bulutangkis yang memenuhi standar tinggi dan digunakan dalam kompetisi resmi dan turnamen." />
+                                <CardLP 
+                                    title="Kompetitif & Turnamen"
+                                    title2="Lapangan bulutangkis kompetitif dan turnamen dirancang khusus untuk pertandingan bulutangkis yang memenuhi standar tinggi dan digunakan dalam kompetisi resmi dan turnamen." 
+                                    src="src/assets/Detroit Photos - Detroit Photography.jpeg"
+                                    />
                             </div>
                           </div>
                         </div>

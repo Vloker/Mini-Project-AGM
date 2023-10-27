@@ -1,12 +1,12 @@
 import {configureStore} from '@reduxjs/toolkit'
 import usersReducer from './feature/Users'
-// import listBookingReducer from './feature/ListBooking'
+import listBookingReducer from './feature/Listbooking'
 
 
 const store = configureStore({
     reducer: {
         users: usersReducer,
-        // listBooking: listBookingReducer
+        booking: listBookingReducer
     }
 })
 export default store
