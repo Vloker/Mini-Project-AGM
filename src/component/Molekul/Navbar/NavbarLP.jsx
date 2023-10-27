@@ -1,8 +1,21 @@
 'use client';
-import { Dropdown, Navbar, Avatar} from 'flowbite-react';
+import { Dropdown, Navbar} from 'flowbite-react';
+import { RxHamburgerMenu } from 'react-icons/rx';
+import {useNavigate} from 'react-router-dom';
 
 const NavbarLP = () => {
+
+  const navigate = useNavigate()
     
+    const handleClik = () => {
+      const isUserConfirmed = window.confirm('Apakah anda ingin Logout?');
+      if(isUserConfirmed) {
+        localStorage.setItem('isLoggedIn', false)
+        navigate('/')
+        window.location.reload()
+      }
+    }
+
     return (
       <Navbar fluid rounded className='bg-green backdrop-blur-sm'>
         
@@ -20,17 +33,11 @@ const NavbarLP = () => {
           <Dropdown
             arrowIcon={false}
             inline
-            label={<Avatar rounded />}
+            label={<RxHamburgerMenu className='text-white w-5 h-5'/>}
           >
-
-            <Dropdown.Header className='text-center'>
-              <span className="block text-sm">Bonnie Green</span>
-              <span className="block truncate text-sm font-medium">name@flowbite.com</span>
-            </Dropdown.Header>
-
-            <Dropdown.Item>Dashboard</Dropdown.Item>
-            <Dropdown.Divider />
-            <Dropdown.Item>Log out</Dropdown.Item>
+            <Dropdown.Item onClick={handleClik}>
+              Logout
+            </Dropdown.Item>
           </Dropdown>
           <Navbar.Toggle />
         </div>

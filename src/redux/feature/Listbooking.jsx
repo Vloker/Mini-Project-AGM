@@ -2,22 +2,22 @@ import { createSlice, createAsyncThunk, createEntityAdapter } from "@reduxjs/too
 import axios from "axios";
 
 export const getBooking = createAsyncThunk("booking/getBooking", async () => {
-    const response = await axios.get('http://localhost:5000/booking');
+    const response = await axios.get('https://65376a81bb226bb85dd331b3.mockapi.io/Booking');
     return response.data;
 })
 
 export const addBooking = createAsyncThunk("booking/addBooking", async ({jam, waktu, tanggal, lapangan}) => {
-    const response = await axios.post('http://localhost:5000/booking', {jam, waktu, tanggal, lapangan});
+    const response = await axios.post('https://65376a81bb226bb85dd331b3.mockapi.io/Booking', {jam, waktu, tanggal, lapangan});
     return response.data;
 })
 
 export const deleteBooking = createAsyncThunk("booking/deleteBooking", async (id) => {
-    await axios.delete(`http://localhost:5000/booking/${id}`);
+    await axios.delete(`https://65376a81bb226bb85dd331b3.mockapi.io/Booking/${id}`);
     return id;
 })
 
 const bookingEntity = createEntityAdapter({
-    selectId: (booking) => booking.id
+    selectId: (Booking) => Booking.id
 });
 
 const listBookingSlice = createSlice({
@@ -36,5 +36,5 @@ const listBookingSlice = createSlice({
             })
     }
 })
-export const bookingSelector = bookingEntity.getSelectors((state) => state.booking)
+export const bookingSelector = bookingEntity.getSelectors((state) => state.Booking)
 export default listBookingSlice.reducer

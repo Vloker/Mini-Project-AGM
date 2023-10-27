@@ -6,21 +6,24 @@ import Description from "../../Atom/Description"
 const GridDetails2 = () => {
     return (
         <>
-         <div className="columns-1 flex justify-center mt-4">
+         <div 
+            className="columns-1 flex justify-center mt-4">
                     <div className="grid grid-cols-3 max-w-4xl gap-2">
-                        <div className="col-span-2 flex flex-col">
+                        <div className="col-span-2 flex items-center">
                             <img 
-                                src="src/assets/Badminton Doubles Strategy - From Basic Rules to Winning the Match.jpeg" 
+                                src="src/assets/Let Us Help You Create the Perfect Court for Your Needs.jpeg" 
                                 className="rounded-lg"
                                 />
                         </div>
-                        <div className=" col-span-1 flex flex-col items-center gap-2">
+                        <div className=" col-span-1 flex items-center">
+                            <div className="flex flex-col gap-2">
                                 <div >
                                         <img src="src/assets/frame-harirak-HiR_pqdlXo0-unsplash.jpg" className="rounded-lg"/>
                                 </div>
                                 <div >
                                         <img src="src/assets/frame-harirak-HiR_pqdlXo0-unsplash.jpg" className="rounded-lg"/>
                                 </div>
+                            </div>
                          </div>
 
                          
@@ -34,7 +37,7 @@ const GridDetails2 = () => {
                             </div>
                         </div>
 
-                        <div className="col-span-1 flex justify-center">
+                        <div className="col-span-1 flex justify-center items-center">
                             <CardDetail
                                 hargaRange="Rp 60.000 - Rp 180.000"
                                 harga1="1 Jam : Rp 60.000"

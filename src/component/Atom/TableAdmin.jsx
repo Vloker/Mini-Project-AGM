@@ -43,25 +43,27 @@ export default function TableAdmin() {
 
   return (
     <>
-    <div className="relative mt-5 ">
-        <div className="absolute inset-y-0 left-0 flex items-center px-3 ">
-            <button>
+  <div className='flex flex-col gap-2 my-5'>
+    <div className="w-2/3 flex items-center rounded-lg border border-gray-200 p-2">
+        <div className="p-2">
               <BiSearch className="w-5 h-5" />
-            </button> 
         </div>
             <input 
               type="text" 
               placeholder="Search"
               value={searchTerm}
               onChange={handleSearch} 
-              className="py-3 pl-10 w-2/4 rounded-xl"/>
+              className='border-none resize-none outline-none p-2 w-full'
+              />
     </div>
 
-    <div className="mt-5 mb-10 pe-5 gap-5 flex flex-col">
+    <div className="flex flex-col gap-2">
+
     <div>
       <ModalList />
     </div>
 
+    <div>
     <Table hoverable>
       <Table.Head>
         <Table.HeadCell>
@@ -97,10 +99,10 @@ export default function TableAdmin() {
           className="bg-white dark:border-gray-700 dark:bg-gray-800"
           key={user.id}
           >
-          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+          <Table.Cell className="font-medium text-gray-900 dark:text-white">
             {user.id}
           </Table.Cell>
-          <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+          <Table.Cell className="font-medium text-gray-900 dark:text-white">
             {user.username}
           </Table.Cell>
           <Table.Cell>
@@ -137,6 +139,8 @@ export default function TableAdmin() {
       </Table.Body>
     </Table>
     </div>
+    </div>
+  </div>
         </>
   )
 }

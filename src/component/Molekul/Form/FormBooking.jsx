@@ -36,7 +36,7 @@ const FormBooking = () => {
                         name="jam"
                         value={jam}
                         onChange={(e) => setJam(e.target.value)}
-                        type="text" 
+                        type="time" 
                         placeholder="12:00"
                         required={true} />
                 </div>

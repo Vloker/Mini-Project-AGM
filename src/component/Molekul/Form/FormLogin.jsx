@@ -1,9 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 import { Button,Label,TextInput } from "flowbite-react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 
 const validationSchema = Yup.object({
   username: Yup.string()
@@ -14,27 +13,28 @@ const validationSchema = Yup.object({
 
 const FormLogin = () => {
 
-  const [login, setLogin] = useState(false)
   const navigate = useNavigate()
   
-
 const handleClik = () => {
-  
-  const dummyUser = {
-    username: "admin",
-    password: "admin1234"
-  }
 
-  if(formik.values.username === dummyUser.username  && formik.values.password === dummyUser.password){
-    setLogin(true)
-    navigate('/Usermanagement')
-  }else if(formik.values.username === 'user' && formik.values.password === 'user'){
-    setLogin(true)
-    navigate('/HomePage')
-  }else{
-    alert('login failed')
+    const dummyUser = {
+      username: "admin",
+      password: "admin1234"
+    }
+
+    if(formik.values.username === dummyUser.username  && formik.values.password === dummyUser.password){
+      localStorage.setItem('isLoggedIn', true)
+      navigate('/Usermanagement')
+
+    }else if(formik.values.username === 'user' && formik.values.password === 'user'){
+      localStorage.setItem('isLoggedIn', true)
+      navigate('/HomePage')
+      
+    }else{
+      alert('login failed')
+    }
+
   }
-}
 
 const formik = useFormik({
   initialValues: {

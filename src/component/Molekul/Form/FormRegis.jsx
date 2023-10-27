@@ -4,11 +4,12 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useDispatch } from 'react-redux';
 import { addUser } from "../../../redux/feature/Users";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const validationSchema = Yup.object({
   username: Yup.string()
-    .min(3, 'Username must be at least 3 characters'),
+    .min(3, 'Username must be at least 3 characters')
+    .max(15, 'Username must be at most 20 characters'),
   email: Yup.string()
     .email('email is not valid')
     .matches(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, 'email is not valid'),
@@ -35,7 +36,7 @@ const FormRegis = () => {
       username: "",
       email: "",
       password: "",
-      confirmPassword: "",
+      confirmPassword: ""
     },
     validationSchema,
     onSubmit
@@ -47,7 +48,10 @@ const FormRegis = () => {
                 <p>SIGN UP</p>
             </div>
 
-        <form className="flex max-w-md flex-col gap-4" onSubmit={formik.handleSubmit}>
+        <form 
+          className="flex max-w-md flex-col gap-4" 
+          onSubmit={formik.handleSubmit}
+          >
           <div>
             <div className="mb-2 block">
               <Label
@@ -64,7 +68,11 @@ const FormRegis = () => {
               shadow
               type="text"
             />
-            <span className="text-red text-xs">{formik.touched.username && formik.errors.username ? formik.errors.username : ''}</span>
+            <span 
+              className="text-red text-xs">
+              {formik.touched.username && formik.errors.username ? 
+              formik.errors.username : ''}
+            </span>
           </div>
 
           <div>
@@ -83,7 +91,11 @@ const FormRegis = () => {
               shadow
               type="email"
             />
-            <span className="text-red text-xs">{formik.touched.email && formik.errors.email ? formik.errors.email : ''}</span>
+            <span 
+              className="text-red text-xs">
+              {formik.touched.email && formik.errors.email ? 
+              formik.errors.email : ''}
+            </span>
           </div>
 
           <div>
@@ -96,11 +108,16 @@ const FormRegis = () => {
               name="password"
               onChange={formik.handleChange}
               value={formik.values.password}
+              placeholder="password"
               required
               shadow
               type="password"
             />
-            <span className="text-red text-xs">{formik.touched.password && formik.errors.password ? formik.errors.password : ''}</span>
+            <span 
+              className="text-red text-xs">
+              {formik.touched.password && formik.errors.password ? 
+              formik.errors.password : ''}
+            </span>
           </div>
 
           <div>
@@ -114,18 +131,29 @@ const FormRegis = () => {
               name="confirmPassword"
               onChange={formik.handleChange}
               value={formik.values.confirmPassword}
+              placeholder="confirm password"
               required
               shadow
               type="password"
             />
-            <span className="text-red text-xs">{formik.touched.confirmPassword && formik.errors.confirmPassword ? formik.errors.confirmPassword : ''}</span>
+            <span 
+              className="text-red text-xs">
+              {formik.touched.confirmPassword && formik.errors.confirmPassword ? 
+              formik.errors.confirmPassword : ''}
+            </span>
           </div>
+
           <Button type="submit" className="bg-green">Created new account</Button>
+
         </form>
 
         <div className="mt-2 font-montserrat font-normal text-xs text-center">
             <p>Already have an account? 
-                <a href="/Login" className="hover:underline ps-2 font-semibold text-green">Login</a>
+                <Link 
+                  to="/Login" 
+                  className="hover:underline ps-2 font-semibold text-green">
+                  Login
+                </Link>
             </p>
         </div>
         </>

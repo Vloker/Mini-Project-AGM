@@ -2,8 +2,20 @@
 
 import { Sidebar } from 'flowbite-react';
 import { HiArrowSmRight, HiUser } from 'react-icons/hi';
+import {useNavigate} from 'react-router-dom';
 
 const SidebarAdmin = () => {
+
+  const navigate = useNavigate()
+
+  const handleClik = () => {
+    const isUserConfirmed = window.confirm('Apakah anda ingin Logout?');
+    if(isUserConfirmed) {
+      localStorage.setItem('isLoggedIn', false)
+      navigate('/')
+      window.location.reload()
+    }
+  }
     
     return (
       <Sidebar 
@@ -16,18 +28,18 @@ const SidebarAdmin = () => {
               active
               icon={HiUser}
             >
-              <p>
+              <button>
                 Costumers
-              </p>
+              </button>
             </Sidebar.Item>
            
             <Sidebar.Item
               href="/"
               icon={HiArrowSmRight}
             >
-              <p>
+              <button onClick={handleClik}>
                 Logout
-              </p>
+              </button>
             </Sidebar.Item>
           </Sidebar.ItemGroup>
         </Sidebar.Items>

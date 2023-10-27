@@ -12,16 +12,21 @@ const GridDetails1 = () => {
                         <div className="col-span-3">
                             <Back to="/HomePage"/>
                         </div>
-                        <div className="col-span-2 flex flex-col">
-                            <img src="src/assets/Badminton Doubles Strategy - From Basic Rules to Winning the Match.jpeg" className="rounded-lg"/>
+                        <div className="col-span-2 flex items-center">
+                            <img 
+                                src="src/assets/Badminton Doubles Strategy - From Basic Rules to Winning the Match.jpeg" 
+                                className="rounded-lg"
+                                />
                         </div>
-                        <div className=" col-span-1 flex flex-col items-center gap-2">
-                                <div className="">
+                        <div className=" col-span-1 flex items-center">
+                            <div className="flex flex-col gap-2">
+                                <div >
                                         <img src="src/assets/frame-harirak-HiR_pqdlXo0-unsplash.jpg" className="rounded-lg"/>
                                 </div>
-                                <div className="">
+                                <div >
                                         <img src="src/assets/frame-harirak-HiR_pqdlXo0-unsplash.jpg" className="rounded-lg"/>
                                 </div>
+                            </div>
                          </div>
 
                          

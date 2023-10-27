@@ -7,6 +7,22 @@ import { useDispatch } from 'react-redux';
 import { addUser } from '../../redux/feature/Users';
 import { useFormik } from 'formik';
 import GenderRadio from '../Atom/GenderRadio';
+import * as Yup from 'yup';
+
+const validationSchema = Yup.object({
+  username: Yup.string()
+    .min(3, 'Username must be at least 3 characters')
+    .max(15, 'Username must be at most 20 characters'),
+  email: Yup.string()
+    .email('email is not valid')
+    .matches(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, 'email is not valid'),
+  password: Yup.string()
+    .min(8, 'password must be at least 8 characters'),
+  phone: Yup.string()
+    .matches(/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\.\/0-9]*$/g, 'phone is not valid'),
+  address: Yup.string()
+    .min(10, 'address must be at least 10 characters'),
+})
 
 const ModalList = () => {
 
@@ -29,6 +45,7 @@ const ModalList = () => {
         gender: "",
         city: ""
       },
+      validationSchema,
       onSubmit
     })
   
@@ -110,7 +127,7 @@ const ModalList = () => {
                     onChange={formik.handleChange}
                     value={formik.values.phone}
                     placeholder='+62'
-                    type='number'
+                    type='text'
                     required />
               </div>
 
