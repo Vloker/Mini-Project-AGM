@@ -5,7 +5,7 @@ import DefaultSpinner from "../Atom/Spinner";
 
 const FormOpenAI = () => {
   const openai = new OpenAI({
-    apiKey: "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",
+    apiKey: "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",
     dangerouslyAllowBrowser: true,
   });
 
