@@ -34,7 +34,7 @@ const NavbarHL = () => {
     return (
       <Navbar fluid className='backdrop-blur-sm bg-white/20'>
         <Navbar.Brand >
-          <img src="public/assets/Logo.png" className="mr-1 ms-2 h-6 sm:h-9" />
+          <img src="public/Logo.png" className="mr-1 ms-2 h-6 sm:h-9" />
           <span className="self-center whitespace-nowrap text-xl font-semibold text-white">ShuttleSpot</span>
         </Navbar.Brand>
         <Navbar.Toggle />
