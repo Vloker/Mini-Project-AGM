@@ -12,7 +12,7 @@ const GridDetails1 = () => {
                     <div className="grid grid-cols-3 max-w-3xl flex flex-col gap-5">
                         <div className="col-span-3 flex justify-center">
                             <img 
-                                src="src/assets/Pelatihan.jpeg" 
+                                src="public/assets/Pelatihan.jpeg" 
                                 className="w-full h-full" />
                         </div>
                         <div className="flex flex-col col-span-2 gap-2">

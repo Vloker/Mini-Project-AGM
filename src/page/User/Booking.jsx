@@ -35,7 +35,7 @@ const Booking = () => {
 
                         <div className="col-span-1 flex items-center">
                             <img 
-                                src="src/assets/Booking.jpg"  
+                                src="public/assets/Booking.jpg"  
                                 className="rounded-lg"/>
                         </div>
 

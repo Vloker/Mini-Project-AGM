@@ -8,7 +8,7 @@ const Homepage = () => {
         <>
         <section>
                 <header>
-                    <div className="container-sm container-md container-lg container-xl container-2xl bg-no-repeat bg-cover bg-center" style={{backgroundImage: "url('src/assets/Bg-HomePage.jpg')"}}>
+                    <div className="container-sm container-md container-lg container-xl container-2xl bg-no-repeat bg-cover bg-center" style={{backgroundImage: "url('public/assets/Bg-HomePage.jpg')"}}>
                         <div>
                             <NavbarLP />
                         </div>
@@ -36,7 +36,7 @@ const Homepage = () => {
                           <div className="flex gap-2 grid grid-cols-4 justify-center ">
                                 <div className="col-span-1 items-center">
                                 <CardHL 
-                                    imgSrc="src/assets/Rekreasi-Keluarga.jpeg"
+                                    imgSrc="public/assets/Pelatihan.jpeg"
                                     title="Rekreasi & Keluarga" 
                                     title2="4.5" 
                                     title3="Rp 40.000/jam"
@@ -45,7 +45,7 @@ const Homepage = () => {
 
                                 <div className="col-span-1 items-center">
                                 <CardHL 
-                                    imgSrc="src/assets/Berkualitas.jpeg"
+                                    imgSrc="public/assets/Berkualitas.jpeg"
                                     title="Bulutangkis Berkualitas" 
                                     title2="4.8" 
                                     title3="Rp 60.000/jam" 
@@ -54,7 +54,7 @@ const Homepage = () => {
                                 
                                 <div className="col-span-1 items-center">
                                 <CardHL 
-                                    imgSrc="src/assets/Kompetitif.jpeg"
+                                    imgSrc="public/assets/Kompetitif.jpeg"
                                     title="Kompetitf & Turnamen" 
                                     title2="4.95" 
                                     title3="Rp 80.000/jam" 
@@ -63,7 +63,7 @@ const Homepage = () => {
 
                                 <div className="col-span-1 items-center">
                                 <CardHL 
-                                    imgSrc="src/assets/Pelatihan.jpeg"
+                                    imgSrc="public/assets/Pelatihan.jpeg"
                                     title="Pelatihan & Kursus" 
                                     title2="4.7" 
                                     title3="Rp 70.000/jam" 
