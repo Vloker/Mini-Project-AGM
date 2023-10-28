@@ -5,51 +5,45 @@ import CardDetail from "../Card/CardDetail"
 import Description from "../../Atom/Description"
 
 const GridDetails1 = () => {
-    return (
+
+    return(
         <>
-         <div className="columns-1 flex justify-center mt-4">
-                    <div className="grid grid-cols-3 max-w-4xl gap-2">
+         <section>
+            <div className="columns-1 flex justify-center mt-4">
+                    <div className="grid grid-cols-3 max-w-3xl flex flex-col gap-5">
                         <div className="col-span-3">
                             <Back to="/HomePage"/>
                         </div>
-                        <div className="col-span-2 flex items-center">
+                        <div className="col-span-3 flex justify-center">
                             <img 
-                                src="src/assets/Badminton Doubles Strategy - From Basic Rules to Winning the Match.jpeg" 
-                                className="rounded-lg"
-                                />
+                                src="src/assets/Rekreasi-Keluarga.jpeg" 
+                                className="w-full h-full" />
                         </div>
-                        <div className=" col-span-1 flex items-center">
-                            <div className="flex flex-col gap-2">
-                                <div >
-                                        <img src="src/assets/frame-harirak-HiR_pqdlXo0-unsplash.jpg" className="rounded-lg"/>
-                                </div>
-                                <div >
-                                        <img src="src/assets/frame-harirak-HiR_pqdlXo0-unsplash.jpg" className="rounded-lg"/>
-                                </div>
-                            </div>
-                         </div>
+                        <div className="flex flex-col col-span-2 gap-2">
+                            <p 
+                                className="font-montserrat font-bold text-xl text-green">
+                                Rekreasi & Keluarga
+                            </p>
 
-                         
-                        <div className="col-span-2 flex flex-col gap-5">
-                            <p className="font-montserrat font-bold text-2xl text-green">Rekreasi & Keluarga</p>
-                            
-                            <Box />
+                            <Box
+                                toilet="2 toilet"
+                                lapangan="1 lapangan"
+                                kursi="2 kursi"
+                                musollah="1 musollah"/>
 
-                            <div className="flex flex-col gap-2">
-                                <Description title="Lapangan bulu tangkis rekreasi dan keluarga adalah fasilitas olahraga yang dirancang khusus untuk menyediakan ruang bagi individu dan keluarga untuk bermain bulu tangkis dengan suasana yang santai dan ramah keluarga." />
-                            </div>
+                            <Description 
+                                title="Lapangan bulu tangkis dengan tema Rekreasi & Keluarga adalah fasilitas olahraga yang dirancang untuk memberikan lingkungan yang ramah keluarga dan santai di mana individu dan keluarga dapat menikmati permainan bulu tangkis sambil menjalin ikatan sosial."/>
                         </div>
-
-                        <div className="col-span-1 flex justify-center">
-                            <CardDetail
-                                hargaRange="Rp 40.000 - Rp 120.000"
-                                harga1="1 Jam : Rp 40.000"
-                                harga2="2 Jam : Rp 80.000"
-                                harga3="3 Jam : Rp 120.000"
-                            />
+                        <div className="col-span-1 flex justify-end">
+                            <CardDetail 
+                                hargaRange="Rp. 40.000 - Rp. 120.000" 
+                                harga1="1 jam : Rp. 40.000"
+                                harga2="2 jam : Rp. 80.000"
+                                harga3="3 jam : Rp. 120.000"/>
                         </div>
                     </div>
                </div> 
+        </section>
         </>
     )
 }

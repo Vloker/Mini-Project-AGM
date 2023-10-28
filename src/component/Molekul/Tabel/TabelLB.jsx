@@ -2,7 +2,7 @@
 
 import { Table } from 'flowbite-react';
 import { useDispatch, useSelector } from 'react-redux'
-import { getBooking, bookingSelector, deleteBooking } from '../../redux/feature/Listbooking';
+import { getBooking, bookingSelector, deleteBooking } from '../../../redux/feature/Listbooking';
 import { useEffect } from 'react';
 
 const TableListBooking = () => {

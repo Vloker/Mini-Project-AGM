@@ -6,7 +6,7 @@ import listBookingReducer from './feature/Listbooking'
 const store = configureStore({
     reducer: {
         users: usersReducer,
-        Booking: listBookingReducer
+        Booking: listBookingReducer,
     }
 })
 export default store

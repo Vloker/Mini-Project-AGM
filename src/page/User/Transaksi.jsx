@@ -1,38 +1,51 @@
 import NavbarLP from "../../component/Molekul/Navbar/NavbarLP";
 import Footers from "../../component/Molekul/Footers";
 import Back from "../../component/Atom/Back";
-import { useNavigate } from "react-router-dom";
-import TabelTransaksi from "../../component/Atom/TabelTransaksi";
 
 const Transaksi = () => {
 
-    const navigate = useNavigate();
+    const handleClik = () => {
+        alert("Terima kasih atas kepercayaan anda");
+    }
 
     return(
         <>
-          <section>
-                <header>
-                        <NavbarLP />
-                </header>
-                        <div className="container-sm container-md container-lg flex justify-center bg-griy">
-                            <div className="box-content w-2/3 my-10 flex item-center gap-5 flex-col">
-                            
-                            <Back to="/Booking"/>
+        <section>
+            <header>
+                <NavbarLP />
+            </header>
+            <div className="container-sm container-md container-lg container-xl container-2xl">
+                <div className="columns-1 mx-52 mt-8">
+                    <div className="flex flex-col gap-4">
+                    <Back to="/Booking"/>
+                    <p className="font-montserrat text-3xl text-green font-semibold ps-5">Transaksi</p>
+                    </div>
+                </div>
 
-                                <div className="flex flex-col space-y-4">
-                                    <p className='text-green font-montserrat font-bold text-4xl leading-10'>Transaction</p>
-                                    <div className="mx-20 p-5 flex flex-col gap-5 bg-white rounded-xl">
-                                        <p className="font-montserrat text-xl font-bold">Booking Summary</p>
-                                        <div className="flex justify-center ">
-                                            <TabelTransaksi />
-                                        </div>
-                                 </div>
-                             </div>
+                <div className="columns-1 flex justify-center mb-10 ">
+                    <div className="grid grid-cols-2 max-w-4xl gap-10 flex items-center font-montserrat font-semibold text-md">
+                        <div className="col-span-1 flex justify-center">
+                            <button className="flex flex-col  items-center">
+                                <img src="src/assets/Cash.jpg"
+                                    className="w-96 h-96"
+                                    onClick={handleClik}/>
+                                <p>Cash</p>
+                            </button>
+                        </div>
+                        <div className="col-span-1 flex justify-center">
+                            <button className="flex flex-col gap-2 items-center">
+                                <img src="src/assets/Scan.jpg"
+                                    className="w-96 h-96"
+                                    onClick={handleClik}/>
+                                <p>Scan Qris</p>
+                            </button>
                         </div>
                     </div>
-            </section>
-            
-            <Footers />
+
+                </div>
+            </div>
+        <Footers />
+        </section>
         </> 
     )
 }

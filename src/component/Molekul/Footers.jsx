@@ -1,7 +1,7 @@
 'use client';
 
 import { Footer } from 'flowbite-react';
-import {BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
+import {BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
 
 const Footers = () => {
 
@@ -11,9 +11,8 @@ const Footers = () => {
         <div className="grid justify-between sm:flex sm:justify-between md:flex md:grid-cols-1 mx-10 mt-5">
           <div className='flex items-center'>
             <Footer.Brand
-              alt=""
               name="Logo"
-              src="src/assets/Hue_Saturation 1.png"
+              src="src/assets/Logo.png"
               className='w-24 h-28'
             />
             <div>

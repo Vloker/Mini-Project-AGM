@@ -1,6 +1,6 @@
 import React from "react";
 import SidebarAdmin from "../../component/Molekul/Navbar/SidebarAdmin";
-import TableAdmin from "../../component/Atom/TableAdmin";
+import TableAdmin from "../../component/Molekul/Tabel/TableAdmin";
 import NavbarAdmin from "../../component/Molekul/Navbar/NavbarAdmin";
 const Usermanagement = () => {
 

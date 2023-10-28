@@ -8,7 +8,7 @@ const Homepage = () => {
         <>
         <section>
                 <header>
-                    <div className="container-sm container-md container-lg container-xl container-2xl bg-no-repeat bg-cover bg-center" style={{backgroundImage: "url('src/assets/frame-harirak-HiR_pqdlXo0-unsplash.jpg')"}}>
+                    <div className="container-sm container-md container-lg container-xl container-2xl bg-no-repeat bg-cover bg-center" style={{backgroundImage: "url('src/assets/Bg-HomePage.jpg')"}}>
                         <div>
                             <NavbarLP />
                         </div>
@@ -25,7 +25,7 @@ const Homepage = () => {
 
 
             <div className="container-sm container-md container-lg container-xl container-2xl bg-white my-10 flex justify-center">
-                    <div className="box-content w-3/4">
+                    <div className="box-content max-w-4xl">
                         <div className="columns flex flex-col gap-8 w-full">
                           <div>
                             <p  
@@ -33,34 +33,43 @@ const Homepage = () => {
                                 Badminton Court Available
                             </p>
                           </div>
-                          <div className="flex gap-10 justify-center ">
+                          <div className="flex gap-2 grid grid-cols-4 justify-center ">
+                                <div className="col-span-1 items-center">
                                 <CardHL 
-                                    imgSrc="src/assets/Badminton Doubles Strategy - From Basic Rules to Winning the Match.jpeg"
+                                    imgSrc="src/assets/Rekreasi-Keluarga.jpeg"
                                     title="Rekreasi & Keluarga" 
                                     title2="4.5" 
                                     title3="Rp 40.000/jam"
                                 />
+                                </div>
 
+                                <div className="col-span-1 items-center">
                                 <CardHL 
-                                    imgSrc="src/assets/Let Us Help You Create the Perfect Court for Your Needs.jpeg"
+                                    imgSrc="src/assets/Berkualitas.jpeg"
                                     title="Bulutangkis Berkualitas" 
                                     title2="4.8" 
                                     title3="Rp 60.000/jam" 
                                 />
-
+                                </div>
+                                
+                                <div className="col-span-1 items-center">
                                 <CardHL 
-                                    imgSrc="src/assets/Detroit Photos - Detroit Photography.jpeg"
-                                    title="Kompetitif & Turnamen" 
+                                    imgSrc="src/assets/Kompetitif.jpeg"
+                                    title="Kompetitf & Turnamen" 
                                     title2="4.95" 
-                                    title3="Rp 85.000/jam" 
+                                    title3="Rp 80.000/jam" 
                                 />
+                                </div>
 
+                                <div className="col-span-1 items-center">
                                 <CardHL 
-                                    imgSrc="src/assets/download (1).jpeg"
+                                    imgSrc="src/assets/Pelatihan.jpeg"
                                     title="Pelatihan & Kursus" 
                                     title2="4.7" 
                                     title3="Rp 70.000/jam" 
                                 />
+                                </div>
+                                
                           </div>
 
                           <div className="flex flex-col gap-5 mb-5">

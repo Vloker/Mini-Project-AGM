@@ -3,54 +3,44 @@ import Box from "../../Atom/Box"
 import CardDetail from "../Card/CardDetail"
 import Description from "../../Atom/Description"
 
-const GridDetails3 = () => {
-    return (
-        <>
-         <div className="columns-1 flex justify-center mt-4">
-                    <div className="grid grid-cols-3 max-w-4xl gap-2">
-                        <div className="col-span-2 flex items-center">
-                            <img 
-                                src="src/assets/Detroit Photos - Detroit Photography.jpeg" 
-                                className="rounded-lg"
-                                />
-                        </div>
-                        <div className=" col-span-1 flex items-center">
-                            <div className="flex flex-col gap-2">
-                                <div >
-                                        <img src="src/assets/frame-harirak-HiR_pqdlXo0-unsplash.jpg" className="rounded-lg"/>
-                                </div>
-                                <div >
-                                        <img src="src/assets/frame-harirak-HiR_pqdlXo0-unsplash.jpg" className="rounded-lg"/>
-                                </div>
-                            </div>
-                         </div>
+const GridDetails1 = () => {
 
-                         
-                        <div className="col-span-2 flex flex-col gap-5">
+    return(
+        <>
+         <section>
+            <div className="columns-1 flex justify-center mt-4">
+                    <div className="grid grid-cols-3 max-w-3xl flex flex-col gap-5">
+                        <div className="col-span-3 flex justify-center">
+                            <img 
+                                src="src/assets/Kompetitif.jpeg" 
+                                className="w-full h-full" />
+                        </div>
+                        <div className="flex flex-col col-span-2 gap-2">
                             <p 
-                                className="font-montserrat font-bold text-2xl text-green">
+                                className="font-montserrat font-bold text-xl text-green">
                                 Kompetitif & Turnamen
                             </p>
-                            
-                            <Box />
 
-                            <div 
-                                className="flex flex-col gap-2">
-                                <Description title="Lapangan bulutangkis kompetitif & turnamen adalah lapangan khusus yang dirancang untuk mengadakan pertandingan bulutangkis dalam konteks kompetisi atau turnamen resmi. Lapangan ini memiliki ukuran dan standar tertentu yang telah ditentukan oleh badan pengatur olahraga bulutangkis. Biasanya, lapangan ini dilengkapi dengan peralatan seperti jaring, net post, dan garis-garis lapangan yang ditandai dengan presisi." 
-                            />
-                            </div>
+                            <Box
+                                toilet="2 toilet"
+                                lapangan="4 lapangan"
+                                kursi="10 kursi"
+                                musollah="1 musollah"/>
+
+                            <Description 
+                                title="Lapangan bulu tangkis dengan tema Kompetitif & Turnamen adalah fasilitas olahraga yang secara khusus dirancang untuk mendukung kompetisi bulu tangkis tingkat tinggi dan menyelenggarakan turnamen"/>
                         </div>
-
-                        <div className="col-span-1 flex justify-center items-center">
-                            <CardDetail
-                                hargaRange="Rp 85.000 - Rp 255.000"
-                                harga1="1 Jam : Rp 85.000"
-                                harga2="2 Jam : Rp 170.000"
-                                harga3="3 Jam : Rp 255.000" />
+                        <div className="col-span-1 flex justify-end">
+                            <CardDetail 
+                                hargaRange="Rp. 80.000 - Rp. 240.000" 
+                                harga1="1 jam : Rp. 80.000"
+                                harga2="2 jam : Rp. 160.000"
+                                harga3="3 jam : Rp. 240.000"/>
                         </div>
                     </div>
                </div> 
+        </section>
         </>
     )
 }
-export default GridDetails3
+export default GridDetails1

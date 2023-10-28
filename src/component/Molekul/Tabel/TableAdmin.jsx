@@ -3,8 +3,8 @@
 import { Table } from 'flowbite-react';
 import React, {useEffect, useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getUsers, deleteUser, userSelector } from '../../redux/feature/Users';
-import ModalList from "../Molekul/ModalTambahUser"
+import { getUsers, deleteUser, userSelector } from '../../../redux/feature/Users';
+import ModalList from "../ModalTambahUser"
 import { useNavigate } from 'react-router-dom';
 import { BiSearch } from "react-icons/bi";
 

@@ -13,7 +13,6 @@ const SidebarAdmin = () => {
     if(isUserConfirmed) {
       localStorage.setItem('isLoggedIn', false)
       navigate('/')
-      window.location.reload()
     }
   }
     
@@ -34,7 +33,6 @@ const SidebarAdmin = () => {
             </Sidebar.Item>
            
             <Sidebar.Item
-              href="/"
               icon={HiArrowSmRight}
             >
               <button onClick={handleClik}>

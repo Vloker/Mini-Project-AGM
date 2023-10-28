@@ -3,50 +3,44 @@ import Box from "../../Atom/Box"
 import CardDetail from "../Card/CardDetail"
 import Description from "../../Atom/Description"
 
-const GridDetails2 = () => {
-    return (
+const GridDetails1 = () => {
+
+    return(
         <>
-         <div 
-            className="columns-1 flex justify-center mt-4">
-                    <div className="grid grid-cols-3 max-w-4xl gap-2">
-                        <div className="col-span-2 flex items-center">
+         <section>
+            <div className="columns-1 flex justify-center mt-4">
+                    <div className="grid grid-cols-3 max-w-3xl flex flex-col gap-5">
+                        <div className="col-span-3 flex justify-center">
                             <img 
-                                src="src/assets/Let Us Help You Create the Perfect Court for Your Needs.jpeg" 
-                                className="rounded-lg"
-                                />
+                                src="src/assets/Berkualitas.jpeg" 
+                                className="w-full h-full" />
                         </div>
-                        <div className=" col-span-1 flex items-center">
-                            <div className="flex flex-col gap-2">
-                                <div >
-                                        <img src="src/assets/frame-harirak-HiR_pqdlXo0-unsplash.jpg" className="rounded-lg"/>
-                                </div>
-                                <div >
-                                        <img src="src/assets/frame-harirak-HiR_pqdlXo0-unsplash.jpg" className="rounded-lg"/>
-                                </div>
-                            </div>
-                         </div>
+                        <div className="flex flex-col col-span-2 gap-2">
+                            <p 
+                                className="font-montserrat font-bold text-xl text-green">
+                                Bulutangkis Berkualitas
+                            </p>
 
-                         
-                        <div className="col-span-2 flex flex-col gap-5">
-                            <p className="font-montserrat font-bold text-2xl text-green">Bulutangkis Berkualitas</p>
-                            
-                            <Box />
+                            <Box
+                                toilet="2 toilet"
+                                lapangan="2 lapangan"
+                                kursi="4 kursi"
+                                musollah="1 musollah"/>
 
-                            <div className="flex flex-col gap-2">
-                                <Description title="Lapangan bulu tangkis berkualitas dirancang untuk memenuhi kebutuhan pemain yang serius dan penggemar olahraga. Mereka menawarkan lingkungan yang ideal untuk latihan dan persaingan tingkat tinggi dalam bulu tangkis." />
-                            </div>
+                            <Description 
+                                title="Lapangan bulu tangkis dengan tema Bulu Tangkis Berkualitas adalah fasilitas olahraga yang didedikasikan untuk menyediakan lingkungan yang memungkinkan pemain bulu tangkis berlatih dan bersaing di tingkat yang lebih tinggi."/>
                         </div>
-
-                        <div className="col-span-1 flex justify-center items-center">
-                            <CardDetail
-                                hargaRange="Rp 60.000 - Rp 180.000"
-                                harga1="1 Jam : Rp 60.000"
-                                harga2="2 Jam : Rp 120.000"
-                                harga3="3 Jam : Rp 180.000" />
+                        <div className="col-span-1 flex justify-end">
+                            <CardDetail 
+                                hargaRange="Rp. 60.000 - Rp. 180.000" 
+                                harga1="1 jam : Rp. 60.000"
+                                harga2="2 jam : Rp. 120.000"
+                                harga3="3 jam : Rp. 180.000"/>
                         </div>
                     </div>
                </div> 
+        </section>
         </>
     )
 }
-export default GridDetails2
+export default GridDetails1

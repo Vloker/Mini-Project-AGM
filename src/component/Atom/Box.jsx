@@ -3,25 +3,23 @@ import { LiaMosqueSolid } from "react-icons/lia";
 import { PiChair } from "react-icons/pi";
 import { GiTennisCourt } from "react-icons/gi";
 
-const Box = () => {
+const Box = ({toilet, lapangan, kursi, musollah}) => {
     return(
         <>
-        <div className="flex gap-5">
+        <div className="flex gap-5 text-xs">
            <div className="py-5 px-8 rounded-md bg-griy flex flex-col font-montserrat">
                 <div className="flex justify-center">
                     <PiToiletDuotone className="w-10 h-10"/>
                 </div>
-                <div>
-                    <p>2 toilet</p>
-                </div>
+                    <p>{toilet}</p>
             </div>
 
-            <div className="py-5 px-8 rounded-md bg-griy flex flex-col font-montserrat">
+            <div className="p-5 rounded-md bg-griy flex flex-col font-montserrat">
                 <div className="flex justify-center">
                     <GiTennisCourt className="w-10 h-10"/>
                 </div>
                 <div>
-                    <p>1 court</p>
+                    <p>{lapangan}</p>
                 </div>
             </div>
 
@@ -30,16 +28,16 @@ const Box = () => {
                     <PiChair className="w-10 h-10"/>
                 </div>
                 <div>
-                    <p>4 chair</p>
+                    <p>{kursi}</p>
                 </div>
             </div>
 
-            <div className="py-5 px-7 rounded-md bg-griy flex flex-col font-montserrat">
+            <div className="p-5 rounded-md bg-griy flex flex-col font-montserrat">
                 <div className="flex justify-center">
                     <LiaMosqueSolid className="w-10 h-10"/>
                 </div>
                 <div>
-                    <p>Musollah</p>
+                    <p>{musollah}</p>
                 </div>
             </div>
                                 

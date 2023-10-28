@@ -17,11 +17,12 @@ const FormEdit = () => {
     const { id } = useParams();
     const users = useSelector((state) => userSelector.selectById(state, id));
 
+    // Mengambil Data
     useEffect(() => {
         dispatch(getUsers());
     },[dispatch]);
 
-
+    // Menampilkan Data berdasarkan Id
     useEffect(() => {
         if(users){
             setUsername(users.username);
@@ -31,6 +32,7 @@ const FormEdit = () => {
         }
     },[users]);
 
+    // Mengupdate (Edit) Data
     const handleUpdate = async (e) => {
         e.preventDefault();
         await dispatch(updateUser({
@@ -46,9 +48,9 @@ const FormEdit = () => {
 
     return (
         <>
-            <div className="font-montserrat font-bold text-xl text-center">
-                <p>Update User</p>
-            </div>
+        <div className="font-montserrat font-bold text-xl text-center">
+            <p>Update User</p>
+          </div>
 
         <form 
             className="flex max-w-md flex-col gap-4" 
@@ -79,7 +81,7 @@ const FormEdit = () => {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder='+62'
-                    type='number'
+                    type='text'
                     required />
               </div>
 
@@ -112,6 +114,7 @@ const FormEdit = () => {
               </div>
               
           <Button type="submit" className="bg-green">Update</Button>
+
         </form>
         </>
     )
