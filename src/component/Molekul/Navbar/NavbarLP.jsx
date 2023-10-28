@@ -19,13 +19,9 @@ const NavbarLP = () => {
       <Navbar fluid rounded className='bg-green backdrop-blur-sm'>
         
         <Navbar.Brand >
-          <img 
-            src="" 
-            className="mr-3 h-6 sm:h-9" 
-            alt="" 
-          />
+        <img src="src/assets/Logo.png" className="mr-1 ms-2 h-6 sm:h-9" />
           <span 
-            className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+            className="self-center whitespace-nowrap text-xl font-semibold text-white">
             ShuttleSpot
           </span>
         </Navbar.Brand>
