@@ -10,7 +10,7 @@ const HalamanUtama = () => {
           <header>
               <div 
                 className="container-sm container-md container-lg container-xl container-2xl bg-no-repeat bg-cover bg-center" 
-                style={{backgroundImage: "url('src/assets/Bg-HalamanUtama.jpg')"}}
+                style={{backgroundImage: "url('public/assets/Bg-HalamanUtama.jpg')"}}
                >
 
                 <div>
