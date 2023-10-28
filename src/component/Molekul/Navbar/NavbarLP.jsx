@@ -42,7 +42,7 @@ const NavbarLP = () => {
               </Navbar.Link>
 
               <button
-                className='text-white hover:text-sky-700' 
+                className='text-white hover:text-sky-600' 
                 onClick={handleClik}>
                 Logout
               </button>

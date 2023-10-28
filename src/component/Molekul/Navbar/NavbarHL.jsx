@@ -42,7 +42,7 @@ const NavbarHL = () => {
           <Navbar.Link href="/" className='text-white'>Home</Navbar.Link>
           <Navbar.Link href="#About" className='text-white'>About</Navbar.Link>
           <Navbar.Link href="#TopCourt" className='text-white'>Top Court</Navbar.Link>
-          <button className='text-white' onClick={handleClick}>Login</button>
+          <button className='text-white hover:text-sky-600' onClick={handleClick}>Login</button>
         </Navbar.Collapse>
       </Navbar>
     )
