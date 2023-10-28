@@ -8,7 +8,7 @@ const Homepage = () => {
         <>
         <section>
                 <header>
-                    <div className="container-sm container-md container-lg container-xl container-2xl bg-no-repeat bg-cover bg-center" style={{backgroundImage: "url('public/Bg-HomePage.jpg')"}}>
+                    <div className="container-sm container-md container-lg container-xl container-2xl bg-no-repeat bg-cover bg-center" style={{backgroundImage: "url('Bg-HomePage.jpg')"}}>
                         <div>
                             <NavbarLP />
                         </div>
