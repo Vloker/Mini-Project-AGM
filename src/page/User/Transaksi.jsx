@@ -26,7 +26,7 @@ const Transaksi = () => {
                     <div className="grid grid-cols-2 max-w-4xl gap-10 flex items-center font-montserrat font-semibold text-md">
                         <div className="col-span-1 flex justify-center">
                             <button className="flex flex-col  items-center">
-                                <img src="public/Cash.jpg"
+                                <img src="Cash.jpg"
                                     className="w-96 h-96"
                                     onClick={handleClik}/>
                                 <p>Cash</p>
@@ -34,7 +34,7 @@ const Transaksi = () => {
                         </div>
                         <div className="col-span-1 flex justify-center">
                             <button className="flex flex-col gap-2 items-center">
-                                <img src="public/Scan.jpg"
+                                <img src="Scan.jpg"
                                     className="w-96 h-96"
                                     onClick={handleClik}/>
                                 <p>Scan Qris</p>

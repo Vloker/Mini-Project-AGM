@@ -16,7 +16,7 @@ const GridDetails1 = () => {
                         </div>
                         <div className="col-span-3 flex justify-center">
                             <img 
-                                src="public/Rekreasi-Keluarga.jpeg" 
+                                src="Rekreasi-Keluarga.jpeg" 
                                 className="w-full h-full" />
                         </div>
                         <div className="flex flex-col col-span-2 gap-2">

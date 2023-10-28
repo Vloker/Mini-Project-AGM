@@ -10,7 +10,7 @@ const HalamanUtama = () => {
           <header>
               <div 
                 className="container-sm container-md container-lg container-xl container-2xl bg-no-repeat bg-cover bg-center" 
-                style={{backgroundImage: "url('public/bgHalamanUtama.jpg')"}}
+                style={{backgroundImage: "url('bgHalamanUtama.jpg')"}}
                >
 
                 <div>
@@ -61,7 +61,7 @@ const HalamanUtama = () => {
                 <div className="box-content my-20">
                     <div className="columns flex items-center gap-44 w-full">
                         <div className="w-96">
-                            <img src="public/Layer 2.png"/>
+                            <img src="Layer 2.png"/>
                         </div>
                         <div className="w-96 font-montserrat flex flex-col gap-4">
                             <p 
@@ -94,7 +94,7 @@ const HalamanUtama = () => {
                             <CardLP 
                                 title="Rekreasi & Keluarga" 
                                 title2="Lapangan bulutangkis rekreasi keluarga adalah lapangan yang dirancang untuk bermain bulutangkis dan bersenang-senang bersama dalam lingkungan yang santai."
-                                src="public/Rekreasi-Keluarga.jpeg"
+                                src="Rekreasi-Keluarga.jpeg"
                             />
                         </div>
 
@@ -102,7 +102,7 @@ const HalamanUtama = () => {
                             <CardLP 
                                 title="Bulutangkis Berkualitas" 
                                 title2="Lapangan bulutangkis berkualitas adalah lapangan olahraga yang memenuhi standar tinggi untuk permainan bulutangkis" 
-                                src="public/Berkualitas.jpeg"
+                                src="Berkualitas.jpeg"
                             />
                         </div>
 
@@ -110,7 +110,7 @@ const HalamanUtama = () => {
                             <CardLP 
                                 title="Kompetitif & Turnamen"
                                 title2="Lapangan bulutangkis kompetitif dan turnamen dirancang khusus untuk pertandingan bulutangkis yang memenuhi standar tinggi dan digunakan dalam kompetisi resmi dan turnamen." 
-                                src="public/Kompetitif.jpeg"
+                                src="Kompetitif.jpeg"
                             />
                         </div>
                     </div>

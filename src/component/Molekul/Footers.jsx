@@ -12,7 +12,7 @@ const Footers = () => {
           <div className='flex items-center'>
             <Footer.Brand
               name="Logo"
-              src="public/Logo.png"
+              src="Logo.png"
               className='w-24 h-28'
             />
             <div>

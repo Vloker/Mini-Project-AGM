@@ -36,7 +36,7 @@ const Homepage = () => {
                           <div className="flex gap-2 grid grid-cols-4 justify-center ">
                                 <div className="col-span-1 items-center">
                                 <CardHL 
-                                    imgSrc="public/Pelatihan.jpeg"
+                                    imgSrc="Pelatihan.jpeg"
                                     title="Rekreasi & Keluarga" 
                                     title2="4.5" 
                                     title3="Rp 40.000/jam"
@@ -45,7 +45,7 @@ const Homepage = () => {
 
                                 <div className="col-span-1 items-center">
                                 <CardHL 
-                                    imgSrc="public/Berkualitas.jpeg"
+                                    imgSrc="Berkualitas.jpeg"
                                     title="Bulutangkis Berkualitas" 
                                     title2="4.8" 
                                     title3="Rp 60.000/jam" 
@@ -54,7 +54,7 @@ const Homepage = () => {
                                 
                                 <div className="col-span-1 items-center">
                                 <CardHL 
-                                    imgSrc="public/Kompetitif.jpeg"
+                                    imgSrc="Kompetitif.jpeg"
                                     title="Kompetitf & Turnamen" 
                                     title2="4.95" 
                                     title3="Rp 80.000/jam" 
@@ -63,7 +63,7 @@ const Homepage = () => {
 
                                 <div className="col-span-1 items-center">
                                 <CardHL 
-                                    imgSrc="public/Pelatihan.jpeg"
+                                    imgSrc="Pelatihan.jpeg"
                                     title="Pelatihan & Kursus" 
                                     title2="4.7" 
                                     title3="Rp 70.000/jam" 
