@@ -6,10 +6,8 @@ import APIResponse from "../Atom/ResponsAPI";
 
 const FormOpenAI = () => {
 
-  const Apikey = import.meta.env.VITE_REACT_APP_OPENAI_API_KEY
-
   const openai = new OpenAI({
-    apiKey: Apikey,
+    apiKey: import.meta.env.VITE_REACT_APP_OPENAI_API_KEY,
     dangerouslyAllowBrowser: true
   });
 
