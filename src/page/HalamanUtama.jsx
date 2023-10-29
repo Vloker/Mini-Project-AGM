@@ -4,6 +4,7 @@ import CardLP from "../component/Molekul/Card/CardLP";
 import Footers from "../component/Molekul/Footers";
 
 const HalamanUtama = () => {
+
     return (
        <>
         <section>
