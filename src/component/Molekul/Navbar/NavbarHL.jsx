@@ -19,13 +19,13 @@ const NavbarHL = () => {
 
   const handleClick = () => {
     if (isLogin) {
-      // Jika pengguna sedang login maka akan pindah ke halaman HomePage
-      localStorage.setItem('isLoggedIn', 'true');
+
+      localStorage.setItem('isLoggedIn', 'false');
       setIsLogin(true);
       navigate('/HomePage');
     } else {
-      // Jika pengguna belum login maka akan pindah ke halaman Login
-      localStorage.setItem('isLoggedIn', 'false');
+      
+      localStorage.setItem('isLoggedIn', 'true');
       setIsLogin(false);
       navigate('/Login');
     }
