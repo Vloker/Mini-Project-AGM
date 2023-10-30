@@ -36,7 +36,7 @@ const Homepage = () => {
                           <div className="flex gap-2 grid grid-cols-4 justify-center ">
                                 <div className="col-span-1 items-center">
                                 <CardHL 
-                                    imgSrc="Pelatihan.jpeg"
+                                    imgSrc="Rekreasi-Keluarga.jpeg"
                                     title="Rekreasi & Keluarga" 
                                     title2="4.5" 
                                     title3="Rp 40.000/jam"
