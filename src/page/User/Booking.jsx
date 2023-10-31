@@ -2,7 +2,6 @@ import NavbarLP from "../../component/Molekul/Navbar/NavbarLP"
 import FormBooking from "../../component/Molekul/Form/FormBooking"
 import TableLB from "../../component/Molekul/Tabel/TabelLB"
 import Footers from "../../component/Molekul/Footers"
-import { Link } from "react-router-dom"
 
 const Booking = () => {
     return (
@@ -45,16 +44,8 @@ const Booking = () => {
                                 Daftar Booking
                             </p>
 
-                            <div>
                                 <TableLB />
-                            </div>
-
-                                <Link 
-                                    to="/Transaksi" 
-                                    className="bg-green text-white text-center font-bold hover:bg-griy hover:text-green py-2 px-4 rounded">
-                                    Transaksi
-                                </Link>
-
+                                
                             </div>
                         </div>
                     </div>

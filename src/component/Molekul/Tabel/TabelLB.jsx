@@ -4,11 +4,13 @@ import { Table } from 'flowbite-react';
 import { useDispatch, useSelector } from 'react-redux'
 import { getBooking, bookingSelector, deleteBooking } from '../../../redux/feature/Listbooking';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const TableListBooking = () => {
 
   const dispatch = useDispatch();
   const data = useSelector(bookingSelector.selectAll);
+  const navigate = useNavigate();
 
   // menampilkan Data
   useEffect(() => {
@@ -25,7 +27,18 @@ const TableListBooking = () => {
     }
   }
 
+
+  const handleklik = () => {
+    if(data.length === 0) {
+      alert('Data Kosong')
+    }else{
+      navigate('/Transaksi')
+    }
+  }
+
     return (
+      <>
+      
       <Table hoverable >
         <Table.Head>
           <Table.HeadCell>
@@ -72,6 +85,14 @@ const TableListBooking = () => {
         ))}
       </Table.Body>
       </Table>
+
+    <button 
+      onClick={handleklik}
+      className="bg-green text-white text-center font-bold hover:bg-griy hover:text-green py-2 px-4 rounded mt-5">
+      Transaksi
+    </button>
+    
+    </>
     )
 }
 export default TableListBooking
