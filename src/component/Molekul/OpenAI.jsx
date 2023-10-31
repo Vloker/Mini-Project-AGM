@@ -17,8 +17,13 @@ const FormOpenAI = () => {
   const AICLick = async (prompt) => {
     setLoading(true);
 
+    // Sistem akan meminta user untuk memberikan jawaban untuk pertanyaan Seputar Badminton
     const promptWithBadminton = `Jawablah pertanyaan hanya tentang bulutangkis dan tidak menjawab pertanyaan selain bulutangkis: ${prompt}`;
+
+    // Membatasi kata-kata yang tidak sesuai
     const unrelatedKeywords = ["football", "soccer", "baseball", "tennis", "pencipta", "penyanyi", "pelukis", "kartun", "animasi"];
+
+    // Mengecek apakah prompt mengandung kata-kata yang tidak sesuai
     const isUnrelated = unrelatedKeywords.some((keyword) => prompt.toLowerCase().includes(keyword.toLowerCase()));
 
     if (isUnrelated) {
