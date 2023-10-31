@@ -10,7 +10,7 @@ const options = [
 const  SelectionWithValues = ({onChange,value}) => {
 
   return (
-      <select value={value} onChange={onChange} className='rounded-md border border-gray-200'>
+      <select value={value} onChange={onChange} className='rounded-md border border-gray-200' required>
         <option value="" className='font-montserrat text-griy'>Pilih lapangan</option>
         {options.map(option => (
           <option key={option.value} value={option.value} className='font-montserrat'>

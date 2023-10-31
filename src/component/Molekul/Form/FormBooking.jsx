@@ -5,8 +5,17 @@ import { Label, TextInput} from 'flowbite-react';
 import { useDispatch, useSelector } from 'react-redux'
 import { addBooking, bookingSelector } from "../../../redux/feature/Listbooking";
 import { useState } from 'react';
+import * as yup from 'yup'
+
 
 const FormBooking = () => {
+
+    const schema = yup.object().shape({
+        jam: yup.string().required("Jam wajib diisi"),
+        waktu: yup.string().required("waktu wajib diisi"),
+        tanggal: yup.string().required("tanggal wajib diisi"),
+        lapangan: yup.string().required("Lapangan wajib diisi")
+    })
 
     const dispatch = useDispatch()
     const data = useSelector(bookingSelector.selectAll);
@@ -73,6 +82,7 @@ const FormBooking = () => {
                     <OptionsWaktu 
                         onChange={(e) => setWaktu(e.target.value)}
                         value={waktu}
+                        
                         />
                 </div>
 

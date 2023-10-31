@@ -10,7 +10,7 @@ const OptionsWaktu = ({onChange, value}) => {
 
     return(
         <>
-            <select value={value} onChange={onChange} className='rounded-md border border-gray-200'>
+            <select value={value} onChange={onChange} className='rounded-md border border-gray-200' required>
               <option value="" className='font-montserrat text-griy '>------</option>
               {optionsWaktu.map(option => (
                 <option key={option.value} value={option.value} className='font-montserrat'>
